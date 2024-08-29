@@ -10,6 +10,7 @@ AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
 LSP4EReadOccurrenceIndicationColor=26,95,140
 LSP4ETextOccurrenceIndicationColor=26,95,140
 LSP4EWriteOccurrenceIndicationColor=26,95,140
+STS4BootMarkerIndicationColor=54,81,25
 TM4EMatchingPairColor=26,95,140
 TextOccurrenceIndicationColor=27, 98, 145
 asOccurencesIndicationColor=65,65,4

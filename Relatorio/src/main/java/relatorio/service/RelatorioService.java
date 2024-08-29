@@ -11,11 +11,12 @@ public class RelatorioService {
 	
 	public RelatorioService(Relatorio relatorio) {
 		this.repository = new RelatorioRepository(relatorio);
+		this.generator = new PdfGenerator();
 	}
 
 	public Relatorio getRelatorio() {
-		generator.gerarPdf(this.repository.getRelatorio());
+		generator.gerarPdf(repository.getRelatorio());
 		
-		return this.repository.getRelatorio();
+		return repository.getRelatorio();
 	}
 }

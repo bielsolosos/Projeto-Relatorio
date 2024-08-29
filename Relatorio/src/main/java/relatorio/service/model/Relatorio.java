@@ -7,16 +7,16 @@ public class Relatorio {
 
 	private long id;
 	private LocalDate data;
-	private Cliente cliente;
-	private List<Pedido> pedidos;
+	private String nomeCliente;
+	private List<Produto> pedidos;
 
 	public Relatorio() {
 	}
 
-	public Relatorio(long id, LocalDate data, Cliente cliente, List<Pedido> pedidos) {
+	public Relatorio(long id, String nomeCliente, List<Produto> pedidos) {
 		this.id = id;
-		this.data = data;
-		this.cliente = cliente;
+		this.data = LocalDate.now();
+		this.nomeCliente = nomeCliente;
 		this.pedidos = pedidos;
 	}
 
@@ -36,20 +36,26 @@ public class Relatorio {
 		this.data = data;
 	}
 
-	public Cliente getCliente() {
-		return cliente;
+	public String getNomeCliente() {
+		return nomeCliente;
 	}
 
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
+	public void setNomeCliente(String nomeCliente) {
+		this.nomeCliente = nomeCliente;
 	}
 
-	public List<Pedido> getPedidos() {
+	public List<Produto> getPedidos() {
 		return pedidos;
 	}
 
-	public void setPedidos(List<Pedido> pedidos) {
+	public void setPedidos(List<Produto> pedidos) {
 		this.pedidos = pedidos;
 	}
 
+	@Override
+	public String toString() {
+		return "Relatorio [id=" + id + ", data=" + data + ", nomeCliente=" + nomeCliente + ", pedidos=" + pedidos + "]";
+	}
+
+	
 }

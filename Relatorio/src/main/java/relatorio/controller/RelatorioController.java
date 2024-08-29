@@ -11,7 +11,7 @@ public class RelatorioController {
 		this.relatorioService = new RelatorioService(relatorio);
 	}
 
-	public Relatorio imprimeRelatorio() {
-		return relatorioService.getRelatorio();
+	public void imprimeRelatorio() {
+		System.out.println(relatorioService.getRelatorio().toString());
 	}
 }
