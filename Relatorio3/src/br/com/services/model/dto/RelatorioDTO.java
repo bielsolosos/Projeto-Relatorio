@@ -1,64 +1,60 @@
 package br.com.services.model.dto;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.StringJoiner;
-
-import br.com.services.entity.FooterEntity;
-import br.com.services.entity.HeaderEntity;
-import br.com.services.model.Body;
 
 public class RelatorioDTO {
 
-	private HeaderEntity header;
-	private List<Body> bodyList;
-	private FooterEntity footer;
+	// isso aqui vem do Header
+	private LocalDate data;
+	private String nomeEmpresa;
 
-	public RelatorioDTO(HeaderEntity header, List<Body> bodyList, FooterEntity footer) {
-		this.header = header;
-		this.bodyList = bodyList;
-		this.footer = footer;
+	// Footer
+	private String footer;
+
+	// Body
+	private List<String> bodyList = new ArrayList<>();
+
+	public LocalDate getData() {
+		return data;
 	}
 
-	public HeaderEntity getHeader() {
-		return header;
+	public void setData(LocalDate data) {
+		this.data = data;
 	}
 
-	public List<Body> getBodyList() {
-		return bodyList;
+	public String getNomeEmpresa() {
+		return nomeEmpresa;
 	}
 
-	public FooterEntity getFooter() {
+	public void setNomeEmpresa(String nomeEmpresa) {
+		this.nomeEmpresa = nomeEmpresa;
+	}
+
+	public String getFooter() {
 		return footer;
 	}
 
+	public void setFooter(String footer) {
+		this.footer = footer;
+	}
+
+	public List<String> getBodyList() {
+		return bodyList;
+	}
+
+	public void setBodyList(List<String> bodyList) {
+		this.bodyList = bodyList;
+	}
+
+	//fazer bonitinho
 	@Override
 	public String toString() {
-		// Formatando o Header
-		String headerStr = String.format("Data: %s\nEmpresa: %s\n", 
-			header.getData(), 
-			header.getNomeEmpresa()
-		);
-
-		// Formatando o Body
-		StringJoiner bodyStr = new StringJoiner("\n");
-		for (Body body : bodyList) {
-			bodyStr.add(String.format("ID: %d, Nome: %s, Descrição: %s, Detalhe: %s, Valor: %.2f", 
-				body.getId(), 
-				body.getNome(), 
-				body.getDescricao(), 
-				body.getDetalhe(), 
-				body.getValor()
-			));
-		}
-
-		// Formatando o Footer
-		String footerStr = String.format("Footer: %s", footer.getFooter());
-
-		// Unindo todas as partes
-		return String.format("===== Relatório =====\n\nHeader:\n%s\nBody:\n%s\n\nFooter:\n%s", 
-			headerStr, 
-			bodyStr.toString(), 
-			footerStr
-		);
+		return "RelatorioDTO [data=" + data + ", nomeEmpresa=" + nomeEmpresa + ", footer=" + footer + ", bodyList="
+				+ bodyList + "]";
 	}
+
+	
+	
 }

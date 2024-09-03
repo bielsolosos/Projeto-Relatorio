@@ -7,8 +7,9 @@ import br.com.services.model.dto.RelatorioDTO;
 public class RelatorioService {
 
 	public RelatorioDTO geraRelatorio(TipoRelatorio relatorio) {
+
 		GeradorRelatorio gerador = new GeradorRelatorio();
-		
+
 		return gerador.criarRelatorio(relatorio);
 	}
 }

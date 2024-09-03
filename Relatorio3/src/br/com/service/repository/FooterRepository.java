@@ -1,4 +1,4 @@
-package br.com.repository;
+package br.com.service.repository;
 
 import br.com.services.entity.FooterEntity;
 

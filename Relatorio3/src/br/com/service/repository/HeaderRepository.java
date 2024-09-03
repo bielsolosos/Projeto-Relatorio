@@ -1,4 +1,4 @@
-package br.com.repository;
+package br.com.service.repository;
 
 import java.time.LocalDate;
 

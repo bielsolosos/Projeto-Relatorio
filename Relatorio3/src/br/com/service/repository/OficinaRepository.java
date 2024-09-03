@@ -1,15 +1,17 @@
-package br.com.repository;
+package br.com.service.repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.service.repository.interfaces.RelatorioRepository;
 import br.com.services.entity.OficinaEntity;
-import br.com.services.model.Body;
+import br.com.services.interfaces.Relatorio;
 
-public class OficinaRepository {
-
-	public List<OficinaEntity> getBody() {
-		List<OficinaEntity> oficinas = new ArrayList<>();
+public class OficinaRepository implements RelatorioRepository {
+	
+	@Override
+	public List<Relatorio> getRelatorios() {
+		List<Relatorio> oficinas = new ArrayList<>();
 
 		oficinas.add(new OficinaEntity(1L, "Oficina do João", "Troca de óleo", 150.0, "Fiat Uno"));
 		oficinas.add(
@@ -19,11 +21,5 @@ public class OficinaRepository {
 		return oficinas;
 	}
 
-	public List<Body> popularRelatorioDTO() {
-		List<Body> relatorios = new ArrayList<>();
-		for (OficinaEntity oficina : getBody()) {
-			relatorios.add(oficina.popularRelatorioDTO());
-		}
-		return relatorios;
-	}
+	
 }

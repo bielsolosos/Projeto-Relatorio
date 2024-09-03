@@ -1,12 +1,13 @@
 package br.com.services.interfaces;
 
-import java.util.Map;
+import java.util.ArrayList;
 
 import br.com.services.model.Body;
 
 public interface Relatorio {
 
-    Map<String, Object> getDetalhes();
 
     Body popularRelatorioDTO();
+    
+    ArrayList<String> getAtributosEmArray();
 }

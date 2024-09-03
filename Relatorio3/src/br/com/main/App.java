@@ -9,7 +9,7 @@ public class App {
 		
 		RelatorioController api = new RelatorioController();
 		
-		api.imprimirRelatorio(TipoRelatorio.REFEICAO);
+		api.imprimirRelatorio(TipoRelatorio.PESSOA);
 	}
 
 }

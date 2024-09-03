@@ -1,7 +1,6 @@
 package br.com.services.entity;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 
 import br.com.services.interfaces.Relatorio;
 import br.com.services.model.Body;
@@ -23,18 +22,19 @@ public class OficinaEntity implements Relatorio {
 	}
 
 	@Override
-	public Map<String, Object> getDetalhes() {
-		Map<String, Object> detalhes = new HashMap<>();
-		detalhes.put("id", id);
-		detalhes.put("nomesOficina", nomesOficina);
-		detalhes.put("servicos", servicos);
-		detalhes.put("precos", precos);
-		detalhes.put("veiculos", veiculos);
-		return detalhes;
-	}
-
-	@Override
 	public Body popularRelatorioDTO() {
 		return new Body(id, nomesOficina, servicos, veiculos, precos);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public ArrayList<String> getAtributosEmArray() {
+		@SuppressWarnings("rawtypes")
+		ArrayList<String> arrayList = new ArrayList<>();
+		arrayList.add(this.nomesOficina);
+		arrayList.add(this.servicos);
+		arrayList.add(this.precos.toString());
+		arrayList.add(this.veiculos);
+		return arrayList;
 	}
 }

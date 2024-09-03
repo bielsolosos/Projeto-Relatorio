@@ -3,37 +3,32 @@ package br.com.service.factory;
 import java.util.List;
 
 import br.com.common.utils.TipoRelatorio;
-import br.com.repository.FooterRepository;
-import br.com.repository.HeaderRepository;
-import br.com.repository.PessoaRepository;
-import br.com.repository.RefeicaoRepository;
-import br.com.services.model.Body;
+import br.com.service.repository.FooterRepository;
+import br.com.service.repository.HeaderRepository;
+import br.com.service.repository.factory.RelatorioFactory;
+import br.com.services.entity.FooterEntity;
+import br.com.services.entity.HeaderEntity;
+import br.com.services.interfaces.Relatorio;
 import br.com.services.model.dto.RelatorioDTO;
 
 public class GeradorRelatorio {
 
 	public RelatorioDTO criarRelatorio(TipoRelatorio tipoRelatorio) {
-		HeaderRepository header = new HeaderRepository();
-		FooterRepository footer = new FooterRepository();
-		List<Body> bodyList = null;
 
-		switch (tipoRelatorio) {
-		case PESSOA:
-			PessoaRepository repository = new PessoaRepository();
-			bodyList = repository.popularRelatorioDTO();
-			break;
-		case REFEICAO:
-			RefeicaoRepository repository2 = new RefeicaoRepository();
-			bodyList = repository2.popularRelatorioDTO();
-			break;
-		case OFICINA:
-			RefeicaoRepository repository3 = new RefeicaoRepository();
-			bodyList = repository3.popularRelatorioDTO();
-			break;
-		default:
-			throw new IllegalArgumentException("Tipo de relatório desconhecido: " + tipoRelatorio);
+		
+		HeaderEntity header = new HeaderRepository().getHeader();
+		FooterEntity footer2 = new FooterRepository().getFooter();
+		RelatorioDTO relatorioDTO = new RelatorioDTO();
+		
+		header.popularHeader(relatorioDTO);
+		footer2.popularFooter(relatorioDTO);
+		
+		List<Relatorio> relatorios = new RelatorioFactory().getRepository(tipoRelatorio).getRelatorios();
+		
+		for (Relatorio relatorio : relatorios) {
+			relatorioDTO.getBodyList().addAll(relatorio.getAtributosEmArray());
 		}
 
-		return new RelatorioDTO(header.getHeader(), bodyList, footer.getFooter());
+		return relatorioDTO;
 	}
 }

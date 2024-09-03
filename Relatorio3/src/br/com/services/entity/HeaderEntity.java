@@ -2,6 +2,8 @@ package br.com.services.entity;
 
 import java.time.LocalDate;
 
+import br.com.services.model.dto.RelatorioDTO;
+
 public class HeaderEntity {
 
 	private LocalDate data;
@@ -21,4 +23,10 @@ public class HeaderEntity {
 		return nomeEmpresa;
 	}
 
+	public void popularHeader(RelatorioDTO relatorio) {
+
+		relatorio.setData(data);
+		relatorio.setNomeEmpresa(nomeEmpresa);
+
+	}
 }
