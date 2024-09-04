@@ -4,9 +4,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.service.entity.RefeicaoEntity;
+import br.com.service.interfaces.Relatorio;
 import br.com.service.repository.interfaces.RelatorioRepository;
-import br.com.services.entity.RefeicaoEntity;
-import br.com.services.interfaces.Relatorio;
 
 public class RefeicaoRepository implements RelatorioRepository {
 

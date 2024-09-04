@@ -2,7 +2,7 @@ package br.com.service.repository;
 
 import java.time.LocalDate;
 
-import br.com.services.entity.HeaderEntity;
+import br.com.service.entity.HeaderEntity;
 
 public class HeaderRepository {
 

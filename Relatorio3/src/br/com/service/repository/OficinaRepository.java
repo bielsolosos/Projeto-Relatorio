@@ -3,9 +3,9 @@ package br.com.service.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.service.entity.OficinaEntity;
+import br.com.service.interfaces.Relatorio;
 import br.com.service.repository.interfaces.RelatorioRepository;
-import br.com.services.entity.OficinaEntity;
-import br.com.services.interfaces.Relatorio;
 
 public class OficinaRepository implements RelatorioRepository {
 	

@@ -3,13 +3,13 @@ package br.com.service.factory;
 import java.util.List;
 
 import br.com.common.utils.TipoRelatorio;
+import br.com.service.entity.FooterEntity;
+import br.com.service.entity.HeaderEntity;
+import br.com.service.interfaces.Relatorio;
+import br.com.service.model.dto.RelatorioDTO;
 import br.com.service.repository.FooterRepository;
 import br.com.service.repository.HeaderRepository;
 import br.com.service.repository.factory.RelatorioFactory;
-import br.com.services.entity.FooterEntity;
-import br.com.services.entity.HeaderEntity;
-import br.com.services.interfaces.Relatorio;
-import br.com.services.model.dto.RelatorioDTO;
 
 public class GeradorRelatorio {
 

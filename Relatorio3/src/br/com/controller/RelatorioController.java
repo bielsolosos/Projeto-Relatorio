@@ -1,7 +1,7 @@
 package br.com.controller;
 
 import br.com.common.utils.TipoRelatorio;
-import br.com.services.RelatorioService;
+import br.com.service.RelatorioService;
 
 public class RelatorioController {
 	 

@@ -1,6 +1,6 @@
 package br.com.service.repository;
 
-import br.com.services.entity.FooterEntity;
+import br.com.service.entity.FooterEntity;
 
 public class FooterRepository {
 
