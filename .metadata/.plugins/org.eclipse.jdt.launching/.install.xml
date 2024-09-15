@@ -2,6 +2,10 @@
 <dirs>
     <entry loc="C:\Program Files\Java\jdk-17\bin" stamp="1724867531211"/>
     <entry loc="C:\Program Files\Java\jdk-17" stamp="1724867532864"/>
+    <entry loc="/home/bielsolosos/Programas/sts-4.25.0.RELEASE/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre" stamp="1726258974176"/>
+    <entry loc="/usr/lib/jvm/java-17-openjdk-amd64" stamp="1726258453774"/>
+    <entry loc="/home/bielsolosos/Programas/sts-4.25.0.RELEASE/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551" stamp="1726258972987"/>
+    <entry loc="/usr/lib/jvm/java-21-openjdk-amd64" stamp="1726256685215"/>
     <entry loc="C:\Users\bielr\sts-4.24.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.3.v20240426-1530" stamp="1724687347790"/>
     <entry loc="C:\Users\bielr\sts-4.24.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.3.v20240426-1530\jre" stamp="1724687349194"/>
 </dirs>
